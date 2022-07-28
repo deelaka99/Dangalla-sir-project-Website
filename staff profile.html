@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - Profile</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         body,
         html {
@@ -13,6 +14,17 @@
             margin: 0;
             border: 0;
             padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
         }
         
         .bg {
@@ -24,10 +36,8 @@
         }
         
         .bg-transp {
-            background-color: black;
             height: 100%;
             width: 100%;
-            opacity: 0.7;
             display: flex;
         }
         
@@ -35,7 +45,7 @@
             height: 100%;
             width: 40%;
             background-color: rgb(47, 3, 88);
-            opacity: 0.7;
+            opacity: 0.8;
         }
         
         .right-side {
@@ -44,13 +54,95 @@
             background-color: rgb(255, 255, 255);
             opacity: 0.7;
         }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 25%;
+        }
+        
+        .middle-upper {
+            height: 50%;
+        }
+        
+        .bottom-upper {
+            height: 25%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link0,
+        .link1,
+        .link2,
+        .link3 {
+            height: 15%;
+            padding-left: 10%;
+            padding-top: 5%;
+        }
+        
+        .link1 a,
+        .link2 a,
+        .link3 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link2:hover,
+        .link3:hover {
+            background-color: blueviolet;
+        }
     </style>
 </head>
 
 <body>
     <div class="bg">
         <div class="bg-transp">
-            <div class="left-side"></div>
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Staff Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0"></div>
+                            <div class="link1">
+                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+                            <div class="link2">
+                                <a href=""><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                            </div>
+                            <div class="link3">
+                                <a href=""><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
             <div class="right-side"></div>
         </div>
     </div>
