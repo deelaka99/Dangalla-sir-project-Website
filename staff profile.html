@@ -43,16 +43,16 @@
         
         .left-side {
             height: 100%;
-            width: 40%;
+            width: 35%;
             background-color: rgb(47, 3, 88);
             opacity: 0.8;
         }
         
         .right-side {
             height: 100%;
-            width: 60%;
+            width: 65%;
             background-color: rgb(255, 255, 255);
-            opacity: 0.7;
+            opacity: 0.87;
         }
         
         .upper {
@@ -97,7 +97,7 @@
         .link3 a {
             text-decoration: none;
             color: white;
-            font-weight: bold;
+            font-weight: 500;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: x-large;
         }
@@ -110,6 +110,143 @@
         .link2:hover,
         .link3:hover {
             background-color: blueviolet;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .pp,
+        .pp-border,
+        .btn-center {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover,
+        .rsm-bottom button:hover {
+            background-color: black;
+        }
+        
+        .rsm-top {
+            height: 35%;
+        }
+        
+        .rsm-middle {
+            height: 55%;
+            position: relative;
+            padding: 1%;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            position: relative;
+        }
+        
+        .rsm-bottom button {
+            padding: 1%;
+            padding-left: 7%;
+            padding-right: 7%;
+            background-color: rgb(63, 3, 63);
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        table {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 30%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 50%;
+        }
+        
+        .td p {
+            text-align: left;
+        }
+        
+        .t-col1 {
+            width: 25%;
+        }
+        
+        .t-col2 {
+            width: 75%;
+        }
+        
+        .t-col1 p {
+            color: rgb(53, 53, 53);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .t-col2 p {
+            color: black;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .rsm-pp {
+            height: 80%;
+            display: flex;
+        }
+        
+        .rsm-pp-name {
+            height: 20%;
+        }
+        
+        .pp-container {
+            height: 100%;
+            width: 40%;
+            position: relative;
+        }
+        
+        .pp-border {
+            width: 204px;
+            height: 204px;
+            background-color: grey;
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            position: relative;
+        }
+        
+        .pp {
+            border: 2px dashed rgb(75, 2, 75);
         }
     </style>
 </head>
@@ -125,7 +262,7 @@
                             <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Staff Portal</h1>
                         </div>
                         <div class="middle-upper-links">
-                            <div class="link0"></div>
+                            <div class="link0" style="padding:0"></div>
                             <div class="link1">
                                 <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
                             </div>
@@ -140,10 +277,90 @@
                     <div class="bottom-upper"></div>
                 </div>
                 <div class="lower">
-                    <p style="color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
                 </div>
             </div>
-            <div class="right-side"></div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div style="width: 70%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-top">
+                        <div class="rsm-pp">
+                            <div style="width: 30%;height: 100%;"></div>
+                            <div class="pp-container">
+                                <div class="pp-border">
+                                    <img src="Src/pp-dummy.jpg" alt="profile pic" style="height:190px;width:190px;border-radius: 50%;" class="pp">
+                                    <!--here-->
+                                </div>
+                            </div>
+                            <div style="width: 30%;height: 100%"></div>
+                        </div>
+                        <div class="rsm-pp-name">
+                            <h1 style="padding-top: 3%;">B.A. Dilshan</h1>
+                        </div>
+                    </div>
+                    <div class="rsm-middle">
+                        <table>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>NIC</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>9545454115v</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>E-mail</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>examle@any.lk</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Mobile No</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>077 564 1545</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Gender</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>Male</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rsm-bottom">
+                        <button type="button" class="btn-center">Edit Profile</button>
+                    </div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
         </div>
     </div>
 </body>
