@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pick Your Role</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        .main {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .upperPart {
+            height: 20%;
+            display: flex;
+        }
+        
+        .middlePart {
+            height: 65%;
+        }
+        
+        .downPart {
+            height: 15%;
+            background-color: rgb(110, 0, 138);
+        }
+        
+        .leftPart {
+            height: 100%;
+            width: 25%;
+        }
+        
+        .rightPart {
+            height: 100%;
+            width: 75%;
+        }
+        
+        button {
+            padding: 5%;
+            text-align: center;
+            background-color: rgb(107, 26, 182);
+            border-radius: 5mm;
+            border: none;
+            color: white;
+        }
+        
+        .middleContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        
+        .cont1,
+        .cont2,
+        .cont3 {
+            width: 33.33%;
+            padding: 2%;
+        }
+        
+        .cell {
+            height: 80%;
+            margin: 5%;
+            border-radius: 5mm;
+            margin-top: 10%;
+            border: none;
+            box-shadow: 0px 0px 7px 7px rgb(151, 151, 151);
+        }
+        
+        .part1 {
+            height: 60%;
+        }
+        
+        .part1 img {
+            width: 70%;
+            height: 70%;
+        }
+        
+        .part2 {
+            height: 10%;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        .part2 p {
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .part3 {
+            height: 30%;
+            text-align: center;
+        }
+        
+        .part3 button {
+            font-size: large;
+            padding-left: 17%;
+            padding-right: 17%;
+            box-shadow: 0px 0px 7px 3px rgb(151, 151, 151);
+            margin: 9%;
+        }
+        
+        .img-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            padding: 15%;
+        }
+        
+        .part3 button:hover {
+            box-shadow: 0px 0px 7px 7px rgb(151, 151, 151);
+        }
+        
+        .leftPart button:hover {
+            opacity: 0.8;
+        }
+        
+        button a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="upperPart">
+            <div class="leftPart">
+                <button style="margin: 20%;padding-left: 10%;padding-right: 10%;font-weight: bold;"><a href="index.htm">Back to Log in</a></button>
+            </div>
+            <div class="rightPart">
+                <h1 style="position:absolute;margin: 0;padding: 10%;">Pick Your Role!</h1>
+            </div>
+        </div>
+        <div class="middlePart">
+            <div class="middleContainer">
+                <div class="cont1">
+                    <div class="cell" style="background-color: rgb(23, 138, 23);">
+                        <div class="part1">
+                            <img src="Src/admin.png" class="img-center">
+                        </div>
+                        <div class="part2">
+                            <p>Staff</p>
+                        </div>
+                        <div class="part3"><button><a href="staff  signup.html">Go</a></button></div>
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cell" style="background-color: rgb(66, 75, 212);">
+                        <div class="part1">
+                            <img src="Src/teacher.png" class="img-center">
+                        </div>
+                        <div class="part2">
+                            <p>Teacher</p>
+                        </div>
+                        <div class="part3"><button>Go</button></div>
+                    </div>
+                </div>
+                <div class="cont3">
+                    <div class="cell" style="background-color: rgb(187, 56, 56);">
+                        <div class="part1">
+                            <img src="Src/student.png" class="img-center">
+                        </div>
+                        <div class="part2">
+                            <p>Student</p>
+                        </div>
+                        <div class="part3"><button>Go</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="downPart">
+            <p style="margin: 0;text-align: center;padding-top: 5%;color: aliceblue;font-family: 'Times New Roman', Times, serif;font-weight: bold;">&copy; All right reserved. Automated Attendance System</p>
+        </div>
+    </div>
+</body>
+
+</html>

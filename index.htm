@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .main {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(3, 0, 3);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            display: flex;
+        }
+        
+        .left-side {
+            width: 60%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .transparent-left {
+            opacity: .8;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #fdfcff;
+        }
+        
+        .right-side {
+            width: 40%;
+            height: 100%;
+            background-color: rgb(28, 0, 54);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+        }
+        
+        input[type="text"] {
+            background-color: rgb(255, 255, 255);
+            text-align: left;
+            border-radius: 5mm;
+            width: 45%;
+            padding: 1.5%;
+            border: 2px solid white;
+        }
+        
+        input[type="submit"] {
+            padding-left: 7%;
+            padding-right: 7%;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+            border-radius: 5mm;
+            background-color: rgb(68, 11, 121);
+            border: none;
+            font-weight: bold;
+        }
+        
+        button {
+            margin-right: 5px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+            border-radius: 5mm;
+            border: none;
+            color: white;
+        }
+        
+        button:hover {
+            color: black;
+            opacity: 0.79;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: rgb(89, 12, 161);
+        }
+        
+        input[type="text"]:hover {
+            opacity: 0.7;
+            border: 2px solid #371a70;
+        }
+        
+        a:hover {
+            opacity: 0.75;
+        }
+        
+        button a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="main">
+            <div class="left-side">
+                <div class="transparent-left"></div>
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-align: center;padding: 5%; background-position: center; margin: 0; margin-top: 30%;margin-bottom: 5%;">Login to Your Account</h1>
+                <div class="form" style="padding: 1%; text-align: center; ">
+                    <input type="text" placeholder="          User ID"><br><br>
+                    <input type="text" placeholder="          Password"><br><br>
+                    <p><i><a class="link1"href="#" style="text-decoration:none; color: rgb(28, 27, 27);">Forgot password</a></i></p>
+                    <input type="submit" value="Sign in" style="margin:0; font-size:medium; color :white;">
+                </div>
+            </div>
+            <div class="right-side">
+                <b><p style="font-family:'Courier New', Courier, monospace;text-align: center;padding: 5%; background-position: center; margin: 0; margin-top: 60%;color: #fdfcff;font-size:32px;">New Here?</p></b>
+                <div style="text-align: center;">
+                    <button style="background-color: rgb(6, 177, 6);"><a href="pickRole.html">Sign up</a></button>
+                    <button style="background-color: rgb(211, 3, 3);"><a href="#">About us</a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
