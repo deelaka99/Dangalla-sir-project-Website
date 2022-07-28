@@ -60,7 +60,7 @@
         
         .row {
             padding: 0.5%;
-            height: 10%;
+            height: 9%;
         }
         
         .col {
@@ -105,6 +105,26 @@
         a:hover {
             opacity: 0.75;
         }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .input-pp {
+            border: none;
+            border-radius: 5mm;
+            background-color: blueviolet;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            font-size: small;
+            padding: 1%;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 
@@ -142,6 +162,10 @@
                     </div>
                     <div class="row">
                         <input type="text" placeholder="       Confirm Password">
+                    </div>
+                    <div class="row">
+                        <label for="">Profile picture </label>
+                        <label class="input-pp">Profile picture <input type="file" name="profile picture"></label>
                     </div>
                     <div class="row">
                         <input type="submit" value="Sign Up">
