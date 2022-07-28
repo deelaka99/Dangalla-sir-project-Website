@@ -68,6 +68,7 @@
             padding: 0.5%;
         }
         
+        button,
         input[type="submit"] {
             border-radius: 10mm;
             border: none;
@@ -93,6 +94,7 @@
             color: rgb(56, 56, 56);
         }
         
+        button:hover,
         input[type="submit"]:hover {
             background-color: rgb(89, 12, 161);
         }
@@ -104,6 +106,27 @@
         
         a:hover {
             opacity: 0.75;
+        }
+        
+        .input-select {
+            border-radius: 10mm;
+            background-color: white;
+            border: 2px solid purple;
+            padding: 2%;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(56, 56, 56);
+        }
+        
+        .input-select:hover {
+            opacity: 0.7;
+            border: 2px solid #371a70;
+        }
+        
+        .input-select option {
+            color: rgb(56, 56, 56);
         }
     </style>
 </head>
@@ -160,17 +183,14 @@
                     <div class="row">
                         <select class="year input-select">
                             <option value="" disabled selected hidden>Year</option>
-                            <option value="1">Faculty of Management studies</option>
-                            <option value="2">Faculty of Social Sciences & Languages</option>
-                            <option value="3">Faculty of Applied Sciences</option>
-                            <option value="4">Faculty of Agricultural Sciences</option>
-                            <option value="5">Faculty of Geomatics</option>
-                            <option value="6">Faculty of Technology</option>
-                            <option value="7">Faculty of Medicine</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
                         </select>
                     </div>
                     <div class="row">
-                        <input type="submit" value="Sign Up">
+                        <button type="button"><a href="student  signup2.html" style="color: white;text-decoration: none;">Next</a></button>
                     </div>
                     <div class="row">
                         <p>Already have an account? <a href="index.htm" style="text-decoration:none">Log in</a></p>
