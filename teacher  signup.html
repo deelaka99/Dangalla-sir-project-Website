@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up - Teacher</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        .main {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+        
+        .main-trans {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(69, 13, 122);
+            opacity: 0.91;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .form {
+            background-color: white;
+            height: 60%;
+            width: 40%;
+            border-radius: 30px;
+            margin: auto;
+            padding: 5%;
+        }
+        
+        .form-cont {
+            padding: 0;
+            height: 100%;
+        }
+        
+        .row input[type="text"] {
+            border-radius: 10mm;
+            background-color: white;
+            border: 2px solid purple;
+            padding: 2%;
+            width: 95%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .row {
+            padding: 0.5%;
+            height: 10%;
+        }
+        
+        .col {
+            width: 50%;
+            padding: 0.5%;
+        }
+        
+        input[type="submit"] {
+            border-radius: 10mm;
+            border: none;
+            background-color: blueviolet;
+            color: white;
+            font-weight: 500;
+            font-size: large;
+            padding: 3%;
+            padding-left: 10%;
+            padding-right: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .row p {
+            text-align: center;
+            font-style: italic;
+            color: rgb(51, 51, 51);
+        }
+        
+        label {
+            color: rgb(56, 56, 56);
+        }
+        
+        input[type="submit"]:hover {
+            background-color: rgb(89, 12, 161);
+        }
+        
+        input[type="text"]:hover {
+            opacity: 0.7;
+            border: 2px solid #371a70;
+        }
+        
+        a:hover {
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-trans">
+            <div class="form">
+                <div class="form-cont">
+                    <div class="row">
+                        <h1 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin: 0;">Sign Up</h1>
+                    </div>
+                    <div class="row" style="display:flex; padding: 0;">
+                        <div class="col">
+                            <input type="text" placeholder="       First Name">
+                        </div>
+                        <div class="col">
+                            <input type="text" placeholder="       Last Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="       Email">
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="       NIC no">
+                    </div>
+                    <div class="row" style="padding: 2%;">
+                        <label>Gender</label> <input type="radio" name="gender" value="male" checked="checked"> <label>Male</label>
+                        <input type="radio" name="gender" value="female"><label>Female</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="       User Name">
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="       Password">
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="       Confirm Password">
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                    <div class="row">
+                        <p>Already have an account? <a href="index.htm" style="text-decoration:none">Log in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
