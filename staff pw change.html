@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff - Profile</title>
+    <title>Staff - Password change</title>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         body,
@@ -57,7 +57,7 @@
             height: 100%;
             width: 65%;
             background-color: rgb(214, 213, 213);
-            opacity: 0.95;
+            opacity: 0.87;
         }
         
         .upper {
@@ -112,7 +112,7 @@
             cursor: default;
         }
         
-        .link2:hover,
+        .link1:hover,
         .link3:hover {
             background-color: blueviolet;
         }
@@ -124,6 +124,7 @@
         
         .rs-middle {
             height: 80%;
+            position: relative;
         }
         
         .rs-bottom {
@@ -148,9 +149,23 @@
             font-size: large;
         }
         
+        .btn-container button {
+            padding: 2%;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: rgb(21, 180, 82);
+            border: none;
+            border-radius: 10mm;
+            color: white;
+            font-size: large;
+        }
+        
         .pp,
         .pp-border,
-        .btn-center {
+        .btn-center,
+        .pw-change-container,
+        .btn-container button,
+        input[type="text"] {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -161,97 +176,57 @@
         }
         
         .logout-btn button:hover,
-        .rsm-bottom button:hover {
+        .rsm-bottom button:hover,
+        .btn-container button:hover {
             background-color: black;
         }
         
-        .rsm-top {
-            height: 35%;
-        }
-        
-        .rsm-middle {
-            height: 55%;
-            position: relative;
-            padding: 1%;
-        }
-        
-        .rsm-bottom {
-            height: 10%;
-            position: relative;
-        }
-        
-        .rsm-bottom button {
-            padding: 1%;
-            padding-left: 7%;
-            padding-right: 7%;
-            background-color: rgb(63, 3, 63);
-            border: none;
-            border-radius: 2mm;
-            color: white;
-            font-size: large;
-        }
-        
-        table {
-            margin: 0;
-            position: absolute;
-            /*According to himself ,behaviours are done*/
-            top: 30%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 50%;
-        }
-        
-        .td p {
-            text-align: left;
-        }
-        
-        .t-col1 {
-            width: 25%;
-        }
-        
-        .t-col2 {
-            width: 75%;
-        }
-        
-        .t-col1 p {
-            color: rgb(53, 53, 53);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        
-        .t-col2 p {
-            color: black;
-            font-weight: bold;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        
-        .rsm-pp {
-            height: 80%;
-            display: flex;
-        }
-        
-        .rsm-pp-name {
-            height: 20%;
-        }
-        
-        .pp-container {
-            height: 100%;
-            width: 40%;
-            position: relative;
-        }
-        
-        .pp-border {
-            width: 204px;
-            height: 204px;
-            background-color: grey;
-            border-radius: 50%;
+        .pw-change-container {
+            height: 60%;
+            width: 70%;
+            background-color: white;
+            border-radius: 10mm;
             box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+        }
+        
+        .pwc-top {
+            height: 15%;
+        }
+        
+        .pwc-middle {
+            height: 70%;
+        }
+        
+        .pwc-bottom {
+            height: 15%;
+        }
+        
+        .input-container {
+            height: 80%;
+        }
+        
+        .btn-container {
+            height: 20%;
             position: relative;
         }
         
-        .pp {
-            border: 2px dashed rgb(75, 2, 75);
+        .input1,
+        .input2,
+        .input3 {
+            height: 30%;
+            position: relative;
+        }
+        
+        input[type="text"] {
+            width: 60%;
+            height: 40%;
+            border: 2px solid darkmagenta;
+            border-radius: 5mm;
+        }
+        
+        input[type="text"]:hover {
+            background-color: rgb(196, 196, 196);
+            border: 2px solid rgb(0, 0, 0);
         }
     </style>
 </head>
@@ -269,10 +244,10 @@
                         <div class="middle-upper-links">
                             <div class="link0" style="padding:0"></div>
                             <div class="link1">
-                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                                <a href="staff profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
                             </div>
                             <div class="link2">
-                                <a href="staff pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
                             </div>
                             <div class="link3">
                                 <a href=""><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
@@ -293,75 +268,25 @@
                     </div>
                 </div>
                 <div class="rs-middle">
-                    <div class="rsm-top">
-                        <div class="rsm-pp">
-                            <div style="width: 30%;height: 100%;"></div>
-                            <div class="pp-container">
-                                <div class="pp-border">
-                                    <img src="Src/pp-dummy.jpg" alt="profile pic" style="height:190px;width:190px;border-radius: 50%;" class="pp">
-                                    <!--here-->
+                    <div class="pw-change-container">
+                        <div class="pwc-top"></div>
+                        <div class="pwc-middle">
+                            <div class="input-container">
+                                <div class="input1">
+                                    <input type="text" name="" placeholder="          Current Password">
+                                </div>
+                                <div class="input2">
+                                    <input type="text" name="" placeholder="          New Password">
+                                </div>
+                                <div class="input3">
+                                    <input type="text" name="" placeholder="          Confirm New Password">
                                 </div>
                             </div>
-                            <div style="width: 30%;height: 100%"></div>
+                            <div class="btn-container">
+                                <button type="button">Change</button>
+                            </div>
                         </div>
-                        <div class="rsm-pp-name">
-                            <h1 style="padding-top: 3%;">B.A. Dilshan</h1>
-                        </div>
-                    </div>
-                    <div class="rsm-middle">
-                        <table>
-                            <tr>
-                                <td class="t-col1">
-                                    <div class="td">
-                                        <p>NIC</p>
-                                    </div>
-                                </td>
-                                <td class="t-col2">
-                                    <div class="td">
-                                        <p>9545454115v</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-col1">
-                                    <div class="td">
-                                        <p>E-mail</p>
-                                    </div>
-                                </td>
-                                <td class="t-col2">
-                                    <div class="td">
-                                        <p>examle@any.lk</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-col1">
-                                    <div class="td">
-                                        <p>Mobile No</p>
-                                    </div>
-                                </td>
-                                <td class="t-col2">
-                                    <div class="td">
-                                        <p>077 564 1545</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-col1">
-                                    <div class="td">
-                                        <p>Gender</p>
-                                    </div>
-                                </td>
-                                <td class="t-col2">
-                                    <div class="td">
-                                        <p>Male</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="rsm-bottom">
-                        <button type="button" class="btn-center">Edit Profile</button>
+                        <div class="pwc-bottom"></div>
                     </div>
                 </div>
                 <div class="rs-bottom"></div>
