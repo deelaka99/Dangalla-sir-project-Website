@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff - Password change</title>
+    <title>Staff - QR code</title>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         body,
@@ -113,7 +113,7 @@
         }
         
         .link1:hover,
-        .link3:hover {
+        .link2:hover {
             background-color: blueviolet;
         }
         
@@ -149,23 +149,7 @@
             font-size: large;
         }
         
-        .btn-container button {
-            padding: 2%;
-            padding-left: 10%;
-            padding-right: 10%;
-            background-color: rgb(21, 180, 82);
-            border: none;
-            border-radius: 10mm;
-            color: white;
-            font-size: large;
-        }
-        
-        .pp,
-        .pp-border,
-        .btn-center,
-        .pw-change-container,
-        .btn-container button,
-        input[type="text"] {
+        .btn-center {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -175,58 +159,8 @@
             transform: translate(-50%, -50%);
         }
         
-        .logout-btn button:hover,
-        .rsm-bottom button:hover,
-        .btn-container button:hover {
+        .logout-btn button:hover {
             background-color: black;
-        }
-        
-        .pw-change-container {
-            height: 60%;
-            width: 70%;
-            background-color: white;
-            border-radius: 10mm;
-            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
-        }
-        
-        .pwc-top {
-            height: 15%;
-        }
-        
-        .pwc-middle {
-            height: 70%;
-        }
-        
-        .pwc-bottom {
-            height: 15%;
-        }
-        
-        .input-container {
-            height: 80%;
-        }
-        
-        .btn-container {
-            height: 20%;
-            position: relative;
-        }
-        
-        .input1,
-        .input2,
-        .input3 {
-            height: 30%;
-            position: relative;
-        }
-        
-        input[type="text"] {
-            width: 60%;
-            height: 40%;
-            border: 2px solid darkmagenta;
-            border-radius: 5mm;
-        }
-        
-        input[type="text"]:hover {
-            background-color: rgb(196, 196, 196);
-            border: 2px solid rgb(0, 0, 0);
         }
     </style>
 </head>
@@ -247,10 +181,10 @@
                                 <a href="staff profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
                             </div>
                             <div class="link2">
-                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                                <a href="staff pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
                             </div>
                             <div class="link3">
-                                <a href="staff qr code.html"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
+                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
                             </div>
                         </div>
                     </div>
@@ -267,27 +201,8 @@
                         <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
                     </div>
                 </div>
-                <div class="rs-middle">
-                    <div class="pw-change-container">
-                        <div class="pwc-top"></div>
-                        <div class="pwc-middle">
-                            <div class="input-container">
-                                <div class="input1">
-                                    <input type="text" name="" placeholder="          Current Password">
-                                </div>
-                                <div class="input2">
-                                    <input type="text" name="" placeholder="          New Password">
-                                </div>
-                                <div class="input3">
-                                    <input type="text" name="" placeholder="          Confirm New Password">
-                                </div>
-                            </div>
-                            <div class="btn-container">
-                                <button type="button">Change</button>
-                            </div>
-                        </div>
-                        <div class="pwc-bottom"></div>
-                    </div>
+                <div class="rs-middle" style="background-color:blue ;">
+
                 </div>
                 <div class="rs-bottom"></div>
             </div>
