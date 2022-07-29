@@ -149,7 +149,23 @@
             font-size: large;
         }
         
-        .btn-center {
+        .rsm-bottom button {
+            padding: 2%;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: rgb(21, 180, 82);
+            border: none;
+            border-radius: 10mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .btn-center,
+        .rsm-bottom button,
+        .qrcode-container,
+        .qrcode,
+        table,
+        select {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -159,8 +175,57 @@
             transform: translate(-50%, -50%);
         }
         
-        .logout-btn button:hover {
+        .logout-btn button:hover,
+        .rsm-bottom button:hover {
             background-color: black;
+        }
+        
+        .rsm-top {
+            height: 20%;
+            position: relative;
+        }
+        
+        .rsm-middle {
+            height: 70%;
+            position: relative;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            position: relative;
+        }
+        
+        .qrcode-container {
+            background-color: white;
+            height: 70%;
+            width: 60%;
+            border-radius: 10mm;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            position: relative;
+        }
+        
+        input[type="text"] {
+            width: 90%;
+        }
+        
+        td p {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        td {
+            height: auto;
+        }
+        
+        .choose-input {
+            padding-top: 10%;
+            position: relative;
+        }
+        
+        select {
+            width: 89%;
+            border: 2px solid darkmagenta;
+            border-radius: 1mm;
         }
     </style>
 </head>
@@ -201,8 +266,88 @@
                         <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
                     </div>
                 </div>
-                <div class="rs-middle" style="background-color:blue ;">
-
+                <div class="rs-middle">
+                    <div class="rsm-top">
+                        <table style="width: 90%;">
+                            <tr>
+                                <div class="tr-captions">
+                                    <td style="width: 40%;">
+                                        <p>Year & Semester</p>
+                                    </td>
+                                    <td style="width: 20%;">
+                                        <p>Subject</p>
+                                    </td>
+                                    <td style="width: 20%;">
+                                        <p>Activity</p>
+                                    </td>
+                                    <td style="width: 20%;">
+                                        <p>Date</p>
+                                    </td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="td-inputs">
+                                    <td>
+                                        <div class="choose-input">
+                                            <select>
+                                                <option value="" disabled selected hidden>Choose...</option>
+                                                <option value="1">Year I Semester I</option>
+                                                <option value="2">Year I Semester II</option>
+                                                <option value="3">Year II Semester I</option>
+                                                <option value="4">Year II Semester II</option>
+                                                <option value="5">Year III Semester I</option>
+                                                <option value="6">Year III Semester II</option>
+                                                <option value="7">Year IV Semester I</option>
+                                                <option value="8">Year IV Semester II</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="choose-input">
+                                            <select>
+                                                <option value="" disabled selected hidden>Choose...</option>
+                                                <option value="1">1st Year</option>
+                                                <option value="2">2nd Year</option>
+                                                <option value="3">3rd Year</option>
+                                                <option value="4">4th Year</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="choose-input">
+                                            <select>
+                                                <option value="" disabled selected hidden>Choose...</option>
+                                                <option value="1">Lecture</option>
+                                                <option value="2">Practical Session</option>
+                                                <option value="3">Lab</option>
+                                                <option value="4">Online Quiz</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="choose-input">
+                                            <select class="year input-select">
+                                                <option value="" disabled selected hidden>Choose...</option>
+                                                <option value="1">1st Year</option>
+                                                <option value="2">2nd Year</option>
+                                                <option value="3">3rd Year</option>
+                                                <option value="4">4th Year</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </div>
+                            </tr>
+                        </table>
+                        <!--here-->
+                    </div>
+                    <div class="rsm-middle">
+                        <div class="qrcode-container">
+                            <img src="Src/qr dummy.png" alt="QR code" style="height:200px;width:200px;" class="qrcode">
+                        </div>
+                    </div>
+                    <div class="rsm-bottom">
+                        <button type="button">Verify</button>
+                    </div>
                 </div>
                 <div class="rs-bottom"></div>
             </div>
