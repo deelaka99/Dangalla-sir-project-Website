@@ -15,6 +15,21 @@
             padding: 0;
         }
         
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+        }
+        
         .bg {
             background-image: url("Src/pexels-pixabay-33545.jpg");
             height: 100%;
@@ -24,98 +39,144 @@
         }
         
         .main {
-            margin: 0;
-            border: 0;
-            padding: 0;
             height: 100%;
-            background-color: rgb(3, 0, 3);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.8;
             display: flex;
         }
         
         .left-side {
-            width: 60%;
+            width: 55%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .transparent-left {
-            opacity: .8;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: #fdfcff;
-        }
-        
-        .right-side {
-            width: 40%;
-            height: 100%;
-            background-color: rgb(28, 0, 54);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: rgb(175, 175, 175);
             opacity: 0.9;
         }
         
-        input[type="text"] {
-            background-color: rgb(255, 255, 255);
-            text-align: left;
-            border-radius: 5mm;
+        .right-side {
             width: 45%;
-            padding: 1.5%;
-            border: 2px solid white;
+            height: 100%;
+            background-color: rgb(28, 0, 54);
+            opacity: 0.9;
         }
         
-        input[type="submit"] {
-            padding-left: 7%;
-            padding-right: 7%;
-            padding-top: 1.5%;
-            padding-bottom: 1.5%;
-            border-radius: 5mm;
-            background-color: rgb(68, 11, 121);
-            border: none;
-            font-weight: bold;
+        .left-top,
+        .left-bottom {
+            height: 25%;
         }
         
-        button {
-            margin-right: 5px;
-            padding-left: 10%;
-            padding-right: 10%;
-            padding-top: 1.5%;
-            padding-bottom: 1.5%;
-            border-radius: 5mm;
+        .left-middle {
+            height: 50%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        
+        .lm-heading,
+        .lm-input,
+        .lm-fpw,
+        .lm-signin-btn {
+            height: 15%;
+            position: relative;
+        }
+        
+        .lm-heading h2,
+        .lm-input input[type="text"],
+        .lm-fpw p,
+        .lm-signin-btn button,
+        .right-row1 h1,
+        .right-row2-col button {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        input[type="text"] {
+            width: 70%;
+            height: 60%;
             border: none;
-            color: white;
+            border-radius: 10mm;
+            padding-left: 3%;
+            padding-right: 3%;
+            background-color: white;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        h2 {
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .lm-fpw p {
+            font-style: italic;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: purple;
         }
         
         button:hover {
-            color: black;
-            opacity: 0.79;
+            opacity: 0.9;
         }
         
-        input[type="submit"]:hover {
-            background-color: rgb(89, 12, 161);
+        .lm-fpw p:hover {
+            color: rgb(173, 30, 216);
         }
         
-        input[type="text"]:hover {
-            opacity: 0.7;
-            border: 2px solid #371a70;
-        }
-        
-        a:hover {
-            opacity: 0.75;
-        }
-        
-        button a {
-            text-decoration: none;
+        .lm-signin-btn button {
+            border: none;
+            border-radius: 10mm;
+            height: 70%;
+            width: 50%;
+            background-color: blueviolet;
             color: white;
-            font-weight: bold;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .right-top {
+            height: 35%;
+        }
+        
+        .right-middle {
+            height: 25%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        
+        .right-bottom {
+            height: 40%;
+        }
+        
+        .right-row1 {
+            height: 40%;
+            position: relative;
+        }
+        
+        .right-row2 {
+            height: 60%;
+            display: flex;
+        }
+        
+        .right-row2-col {
+            height: 100%;
+            width: 50%;
+            position: relative;
+        }
+        
+        .right-row1 h1 {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .right-row2-col button {
+            height: 38%;
+            width: 90%;
+            color: white;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: none;
+            border-radius: 10mm;
+            background-color: black;
         }
     </style>
 </head>
@@ -124,21 +185,41 @@
     <div class="bg">
         <div class="main">
             <div class="left-side">
-                <div class="transparent-left"></div>
-                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-align: center;padding: 5%; background-position: center; margin: 0; margin-top: 30%;margin-bottom: 5%;">Login to Your Account</h1>
-                <div class="form" style="padding: 1%; text-align: center; ">
-                    <input type="text" placeholder="          User ID"><br><br>
-                    <input type="text" placeholder="          Password"><br><br>
-                    <p><i><a class="link1"href="#" style="text-decoration:none; color: rgb(28, 27, 27);">Forgot password</a></i></p>
-                    <input type="submit" value="Sign in" style="margin:0; font-size:medium; color :white;">
+                <div class="left-top"></div>
+                <div class="left-middle">
+                    <div class="lm-heading">
+                        <h2>Login to your Account</h2>
+                    </div>
+                    <div class="lm-input">
+                        <input type="text" name="" placeholder="User ID">
+                    </div>
+                    <div class="lm-input">
+                        <input type="text" name="" placeholder="Password">
+                    </div>
+                    <div class="lm-fpw">
+                        <p>Forgotton the Password</p>
+                    </div>
+                    <div class="lm-signin-btn">
+                        <button type="button">Sign in</button></div>
                 </div>
+                <div class="left-bottom"></div>
             </div>
             <div class="right-side">
-                <b><p style="font-family:'Courier New', Courier, monospace;text-align: center;padding: 5%; background-position: center; margin: 0; margin-top: 60%;color: #fdfcff;font-size:32px;">New Here?</p></b>
-                <div style="text-align: center;">
-                    <button style="background-color: rgb(6, 177, 6);"><a href="pickRole.html">Sign up</a></button>
-                    <button style="background-color: rgb(211, 3, 3);"><a href="#">About us</a></button>
+                <div class="right-top"></div>
+                <div class="right-middle">
+                    <div class="right-row1">
+                        <h1>New Here?</h1>
+                    </div>
+                    <div class="right-row2">
+                        <div class="right-row2-col">
+                            <button type="button" style="background-color: rgb(3, 143, 3);"><a href="pickRole.html">Sign up</a></button>
+                        </div>
+                        <div class="right-row2-col">
+                            <button type="button" style="background-color: red;">About us</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="right-bottom"></div>
             </div>
 
         </div>
