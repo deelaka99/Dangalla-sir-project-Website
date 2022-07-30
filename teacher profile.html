@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher - Profile</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-transp {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .left-side {
+            height: 100%;
+            width: 35%;
+            background-color: rgb(47, 3, 88);
+            opacity: 0.8;
+        }
+        
+        .right-side {
+            height: 100%;
+            width: 65%;
+            background-color: rgb(214, 213, 213);
+            opacity: 0.95;
+        }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 25%;
+        }
+        
+        .middle-upper {
+            height: 50%;
+        }
+        
+        .bottom-upper {
+            height: 25%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link0,
+        .link1,
+        .link2,
+        .link3 {
+            height: 15%;
+            padding-left: 10%;
+            padding-top: 5%;
+        }
+        
+        .link1 a,
+        .link2 a,
+        .link3 a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link2:hover,
+        .link3:hover {
+            background-color: blueviolet;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .pp,
+        .pp-border,
+        .btn-center,
+        .close,
+        .cont-b-btn,
+        .cont-top h1,
+        .cont-middle input[type="text"],
+        .cont-middle p,
+        .cont-m-col-radio,
+        .input-pp {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover,
+        .rsm-bottom button:hover,
+        .cont-b-btn:hover,
+        .input-pp:hover {
+            background-color: black;
+        }
+        
+        .rsm-top {
+            height: 35%;
+        }
+        
+        .rsm-middle {
+            height: 55%;
+            position: relative;
+            padding: 1%;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            position: relative;
+        }
+        
+        .rsm-bottom button,
+        .cont-b-btn {
+            padding: 1%;
+            padding-left: 7%;
+            padding-right: 7%;
+            background-color: rgb(63, 3, 63);
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        table {
+            margin-left: 6%;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 30%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 50%;
+        }
+        
+        .td p {
+            text-align: left;
+        }
+        
+        .t-col1 {
+            width: 25%;
+        }
+        
+        .t-col2 {
+            width: 75%;
+        }
+        
+        .t-col1 p {
+            color: rgb(53, 53, 53);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .t-col2 p {
+            color: black;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .rsm-pp {
+            height: 80%;
+            display: flex;
+        }
+        
+        .rsm-pp-name {
+            height: 20%;
+        }
+        
+        .pp-container {
+            height: 100%;
+            width: 40%;
+            position: relative;
+        }
+        
+        .pp-border {
+            width: 204px;
+            height: 204px;
+            background-color: grey;
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            position: relative;
+        }
+        
+        .pp {
+            border: 2px dashed rgb(75, 2, 75);
+        }
+        /***Modal of password changed***/
+        /* The Modal (background) */
+        
+        .edit-pro-modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            background-color: rgb(214, 213, 213);
+            margin: auto;
+            padding: 3%;
+            border-radius: 10mm;
+            width: 40%;
+            color: black;
+            height: 65%;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: rgb(83, 82, 82);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .cont-top {
+            height: 10%;
+            position: relative;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .cont-middle {
+            height: 80%;
+            position: relative;
+        }
+        
+        .cont-bottom {
+            height: 10%;
+            position: relative;
+        }
+        
+        .cont-b-btn {
+            border-radius: 10mm;
+            padding-left: 13%;
+            padding-right: 13%;
+            padding-bottom: 3%;
+            padding-top: 3%;
+        }
+        
+        .cont-m-row {
+            height: 16.66%;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        
+        .cont-m-col {
+            height: 100%;
+            width: 25%;
+        }
+        
+        .cont-middle input[type="text"] {
+            width: 90%;
+            height: 50%;
+            border: none;
+            border-radius: 10mm;
+            padding-left: 3%;
+            padding-right: 3%;
+            background-color: white;
+            font-size: large;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .input-pp {
+            border: none;
+            border-radius: 5mm;
+            background-color: rgb(63, 3, 63);
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            font-size: small;
+            padding: 1%;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cont-m-col-radio,
+        .cont-m-col-pp {
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg-transp">
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Teacher Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0" style="padding:0"></div>
+                            <div class="link1">
+                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+                            <div class="link2">
+                                <a href="staff pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                            </div>
+                            <div class="link3">
+                                <a href="staff qr code.html"><i class="fa fa-book" aria-hidden="true"></i>  Subjects</a>
+                            </div>
+                            <div class="link3">
+                                <a href="staff qr code.html"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div style="width: 70%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-top">
+                        <div class="rsm-pp">
+                            <div style="width: 30%;height: 100%;"></div>
+                            <div class="pp-container">
+                                <div class="pp-border">
+                                    <img src="Src/pp-dummy.jpg" alt="profile pic" style="height:190px;width:190px;border-radius: 50%;" class="pp">
+                                    <!--here-->
+                                </div>
+                            </div>
+                            <div style="width: 30%;height: 100%"></div>
+                        </div>
+                        <div class="rsm-pp-name">
+                            <h1 style="padding-top: 3%;">Athula Adikari</h1>
+                        </div>
+                    </div>
+                    <div class="rsm-middle">
+                        <table>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>NIC</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>9545454115v</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>E-mail</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>examle@any.lk</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Mobile No</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>077 564 1545</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Faculty</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>Faculty of Appleid Sciences</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Department</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>Department of CIS</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-col1">
+                                    <div class="td">
+                                        <p>Gender</p>
+                                    </div>
+                                </td>
+                                <td class="t-col2">
+                                    <div class="td">
+                                        <p>Male</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rsm-bottom">
+                        <button type="button" class="btn-center" id="btn-edit-profile">Edit Profile</button>
+                    </div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
+        </div>
+    </div>
+    <!--***Modal of edit profile***-->
+
+    <!-- The Modal -->
+    <div id="edit-pro-modal" class="edit-pro-modal">
+        <div style="height: 10%;display: flex;">
+            <div style="height: 100%;width: 90%;"></div>
+            <div style="position: relative;height: 100%;width: 10%;">
+                <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            </div>
+
+        </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="cont-top">
+                <h1>Edit Profile</h1>
+            </div>
+            <div class="cont-middle">
+
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        First Name">
+                </div>
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        Last Name">
+                </div>
+
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        E-mail">
+                </div>
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        NIC no">
+                </div>
+                <div class="cont-m-row" style="display: flex;position: relative;">
+                    <div class="cont-m-col"></div>
+                    <div style="width: 50%;" class="cont-m-col-radio">
+                        Gender <input type="radio" name="gender" id=""> Male
+                        <input type="radio" name="gender" id=""> Female
+                    </div>
+                    <div class="cont-m-col"></div>
+                </div>
+                <div class="cont-m-row" style="display: flex;">
+                    <div class="cont-m-col"></div>
+                    <div style="width: 50%;" class="cont-m-col-pp">
+                        <label class="input-pp">Profile picture <input type="file" name="profile picture"></label>
+                    </div>
+                    <div class="cont-m-col"></div>
+                </div>
+            </div>
+            <div class="cont-bottom">
+                <button type="button" class="cont-b-btn">Submit</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--***JS script - Modal of password changed***-->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("edit-pro-modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btn-edit-profile");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
