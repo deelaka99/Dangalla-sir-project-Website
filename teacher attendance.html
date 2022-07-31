@@ -154,7 +154,12 @@
             font-size: large;
         }
         
-        .btn-center {
+        .btn-center,
+        .rsmb-col button,
+        .rsm-top h1,
+        .rsmmfc-top p,
+        .rsmmfc-middle p,
+        .rsmmfc-bottom p {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -164,8 +169,87 @@
             transform: translate(-50%, -50%);
         }
         
-        .logout-btn button:hover {
+        .logout-btn button:hover,
+        .rsmb-col button:hover {
             background-color: black;
+        }
+        
+        .rsm-top {
+            height: 20%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: relative;
+            font-size: small;
+        }
+        
+        .rsm-middle {
+            height: 70%;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rsmb-col {
+            width: 50%;
+            position: relative;
+        }
+        
+        .rsmb-col button {
+            background-color: darkmagenta;
+            border: none;
+            border-radius: 5mm;
+            width: 65%;
+            height: 50%;
+            color: white;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .rsmm-header {
+            height: 30%;
+            background-color: green;
+        }
+        
+        .rsmm-footer {
+            height: 70%;
+            display: flex;
+        }
+        
+        .rsmmf-col {
+            width: 50%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+            margin-bottom: 15%;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+        }
+        
+        .rsmmfc-top {
+            height: 20%;
+            position: relative;
+            font-size: large;
+            text-align: center;
+        }
+        
+        .rsmmfc-middle {
+            background-color: red;
+            height: 60%;
+            position: relative;
+            font-size: 500%;
+        }
+        
+        .rsmmfc-bottom {
+            height: 20%;
+            position: relative;
+            font-size: smaller;
+        }
+        
+        .rsmmfc-top p,
+        .rsmmfc-middle p,
+        .rsmmfc-bottom p {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
 </head>
@@ -210,7 +294,60 @@
                     </div>
                 </div>
                 <div class="rs-middle">
-
+                    <div class="rsm-top">
+                        <h1>Attendance Summary</h1>
+                    </div>
+                    <div class="rsm-middle">
+                        <div class="rsmm-header">
+                            <table border="2">
+                                <tr>
+                                    <th>Year & Semester :</th>
+                                    <th>Subject :</th>
+                                    <th>Activity :</th>
+                                    <th>Date :</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="" id="">
+                                            
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="rsmm-footer">
+                            <div class="rsmmf-col" style="background-color: rgb(16, 150, 16);">
+                                <div class="rsmmfc-top">
+                                    <p>Total Present Students</p>
+                                </div>
+                                <div class="rsmmfc-middle">
+                                    <p>70%</p>
+                                </div>
+                                <div class="rsmmfc-bottom">
+                                    <p>From 51 Students</p>
+                                </div>
+                            </div>
+                            <div class="rsmmf-col" style="background-color: rgb(214, 201, 18);">
+                                <div class="rsmmfc-top">
+                                    <p>Total Abesent Students</p>
+                                </div>
+                                <div class="rsmmfc-middle">
+                                    <p>30%</p>
+                                </div>
+                                <div class="rsmmfc-bottom">
+                                    <p>From 51 Students</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rsm-bottom">
+                        <div class="rsmb-col">
+                            <button type="button">Present List</button>
+                        </div>
+                        <div class="rsmb-col">
+                            <button type="button">Absent List</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="rs-bottom"></div>
             </div>
