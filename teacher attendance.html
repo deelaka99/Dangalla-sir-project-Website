@@ -159,7 +159,8 @@
         .rsm-top h1,
         .rsmmfc-top p,
         .rsmmfc-middle p,
-        .rsmmfc-bottom p {
+        .rsmmfc-bottom p,
+        table {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -172,6 +173,10 @@
         .logout-btn button:hover,
         .rsmb-col button:hover {
             background-color: black;
+        }
+        
+        .rsmmfc-middle p:hover {
+            opacity: 0.8;
         }
         
         .rsm-top {
@@ -208,7 +213,7 @@
         
         .rsmm-header {
             height: 30%;
-            background-color: green;
+            position: relative;
         }
         
         .rsmm-footer {
@@ -221,28 +226,29 @@
             margin-left: 5%;
             margin-right: 5%;
             margin-top: 5%;
-            margin-bottom: 15%;
+            margin-bottom: 5%;
             box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
         }
         
         .rsmmfc-top {
             height: 20%;
             position: relative;
-            font-size: large;
+            font-size: 97%;
             text-align: center;
         }
         
         .rsmmfc-middle {
-            background-color: red;
             height: 60%;
             position: relative;
             font-size: 500%;
+            font-weight: bold;
         }
         
         .rsmmfc-bottom {
             height: 20%;
             position: relative;
             font-size: smaller;
+            font-style: italic;
         }
         
         .rsmmfc-top p,
@@ -250,6 +256,34 @@
         .rsmmfc-bottom p {
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        
+        table td {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        
+        table th {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        
+        table select {
+            border: 1px solid darkmagenta;
+            background-color: aliceblue;
+            width: 100%;
+            height: 100%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            border-radius: 2mm;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100%;
+            color: gray;
         }
     </style>
 </head>
@@ -299,7 +333,7 @@
                     </div>
                     <div class="rsm-middle">
                         <div class="rsmm-header">
-                            <table border="2">
+                            <table>
                                 <tr>
                                     <th>Year & Semester :</th>
                                     <th>Subject :</th>
@@ -309,7 +343,36 @@
                                 <tr>
                                     <td>
                                         <select name="" id="">
-                                            
+                                            <option value="0">Choose...</option>
+                                            <option value="1">Year 1 Semester 1</option>
+                                            <option value="2">Year 1 Semester 2</option>
+                                            <option value="3">Year 2 Semester 1</option>
+                                            <option value="4">Year 2 Semester 2</option>
+                                            <option value="5">Year 3 Semester 1</option>
+                                            <option value="6">Year 3 Semester 2</option>
+                                            <option value="7">Year 4 Semester 1</option>
+                                            <option value="8">Year 4 Semester 2</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                            <option value="1">IS21010</option>
+                                            <option value="2">IS21011</option>
+                                            <option value="3">IS21012</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                            <option value="1">Lecture</option>
+                                            <option value="2">Practical session</option>
+                                            <option value="3">Online quiz</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -318,7 +381,7 @@
                         <div class="rsmm-footer">
                             <div class="rsmmf-col" style="background-color: rgb(16, 150, 16);">
                                 <div class="rsmmfc-top">
-                                    <p>Total Present Students</p>
+                                    <p>Present Students</p>
                                 </div>
                                 <div class="rsmmfc-middle">
                                     <p>70%</p>
@@ -329,7 +392,7 @@
                             </div>
                             <div class="rsmmf-col" style="background-color: rgb(214, 201, 18);">
                                 <div class="rsmmfc-top">
-                                    <p>Total Abesent Students</p>
+                                    <p>Abesent Students</p>
                                 </div>
                                 <div class="rsmmfc-middle">
                                     <p>30%</p>
