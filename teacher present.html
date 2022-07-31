@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher - Attendance</title>
+    <title>Teacher - Present Students</title>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         body,
@@ -116,7 +116,7 @@
         
         .link1:hover,
         .link2:hover,
-        .link3:hover {
+        .link4:hover {
             background-color: blueviolet;
         }
         
@@ -155,12 +155,8 @@
         }
         
         .btn-center,
-        .rsmb-col button,
-        .rsm-top h1,
-        .rsmmfc-top p,
-        .rsmmfc-middle p,
-        .rsmmfc-bottom p,
-        table {
+        .rsmb-col-btn,
+        .rsmt-header h1 {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -170,120 +166,165 @@
             transform: translate(-50%, -50%);
         }
         
-        .logout-btn button:hover,
-        .rsmb-col button:hover {
+        .logout-btn button:hover {
             background-color: black;
         }
         
-        .rsmmfc-middle p:hover {
-            opacity: 0.8;
+        .rsm-col button:hover {
+            opacity: 0.7;
         }
         
         .rsm-top {
             height: 20%;
+        }
+        
+        .rsm-top h1 {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            position: relative;
-            font-size: small;
         }
         
         .rsm-middle {
+            background-color: white;
             height: 70%;
+            border-radius: 10mm;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            padding: 3%;
         }
         
         .rsm-bottom {
             height: 10%;
+            margin-left: 5%;
             display: flex;
         }
         
-        .rsmb-col {
+        .rsm-col {
             width: 50%;
             position: relative;
         }
         
-        .rsmb-col button {
-            background-color: darkmagenta;
+        .rsmb-col-btn {
             border: none;
-            border-radius: 5mm;
-            width: 65%;
-            height: 50%;
+            background-color: black;
             color: white;
+            border-radius: 5mm;
+            width: 70%;
+            height: 60%;
             font-size: large;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        
-        .rsmm-header {
-            height: 30%;
-            position: relative;
-        }
-        
-        .rsmm-footer {
-            height: 70%;
-            display: flex;
-        }
-        
-        .rsmmf-col {
-            width: 50%;
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
-        }
-        
-        .rsmmfc-top {
-            height: 20%;
-            position: relative;
-            font-size: 97%;
-            text-align: center;
-        }
-        
-        .rsmmfc-middle {
-            height: 60%;
-            position: relative;
-            font-size: 500%;
             font-weight: bold;
         }
         
-        .rsmmfc-bottom {
-            height: 20%;
+        .rsmt-footer {
+            height: 60%;
             position: relative;
-            font-size: smaller;
-            font-style: italic;
         }
         
-        .rsmmfc-top p,
-        .rsmmfc-middle p,
-        .rsmmfc-bottom p {
-            color: white;
+        .rsm-header {
+            height: 15%;
+            display: flex;
+        }
+        
+        .rsm-footer {
+            height: 85%;
+            position: relative;
+        }
+        
+        .rsmh-left-col {
+            width: 40%;
+            height: 100%;
+            padding-top: 5%;
+        }
+        
+        .rsmh-right-col {
+            width: 60%;
+            height: 100%;
+            padding-top: 5%;
+            padding-left: 10%;
+        }
+        
+        .rsmh-right-col input[type="text"] {
+            float: left;
+            border: 1px solid darkmagenta;
+            border-top-left-radius: 2mm;
+            border-bottom-left-radius: 2mm;
+            width: 70%;
+            height: 60%;
+            padding: 2%;
+            background-color: aliceblue;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .rsmh-right-col button {
+            float: left;
+            border: 1px solid darkmagenta;
+            background-color: darkmagenta;
+            height: 60%;
+            padding: 2%;
+            border-top-right-radius: 2mm;
+            border-bottom-right-radius: 2mm;
+            color: rgb(94, 94, 94);
+        }
+        
+        .rsmh-right-col button:hover {
+            background-color: black;
+            border: 1px solid rgb(0, 0, 0);
+            color: white;
+        }
+        
+        .rsmh-left-col p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .rsmh-left-col select {
+            border: 1px solid darkmagenta;
+            border-radius: 2mm;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(233, 235, 168);
         }
         
         table {
-            width: 100%;
+            width: 90%;
+            height: 50%;
+            border-collapse: collapse;
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 30%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        th {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+        
+        td {
+            padding: 1%;
+            color: rgb(63, 63, 63);
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
         
-        table td {
-            padding-left: 2%;
-            padding-right: 2%;
+        tr:hover {
+            background-color: blueviolet;
         }
         
-        table th {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgb(0, 0, 0);
+        td:hover {
+            color: white;
         }
         
-        table select {
-            border: 1px solid darkmagenta;
-            background-color: aliceblue;
-            width: 100%;
-            height: 100%;
-            padding-top: 3%;
-            padding-bottom: 3%;
-            border-radius: 2mm;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 100%;
-            color: gray;
+        .tr-heading {
+            background-color: grey;
+        }
+        
+        td,
+        tr,
+        th,
+        table {
+            border: none;
         }
     </style>
 </head>
@@ -307,10 +348,10 @@
                                 <a href="teacher pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
                             </div>
                             <div class="link3">
-                                <a href="teacher subjects.html"><i class="fa fa-book" aria-hidden="true"></i>  Subjects</a>
+                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-book" aria-hidden="true"></i>  Subjects</a>
                             </div>
                             <div class="link4">
-                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                                <a href="teacher attendance.html"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
                             </div>
                         </div>
                     </div>
@@ -329,86 +370,70 @@
                 </div>
                 <div class="rs-middle">
                     <div class="rsm-top">
-                        <h1>Attendance Summary</h1>
+                        <h1>Attendance Summary : Present</h1>
                     </div>
                     <div class="rsm-middle">
-                        <div class="rsmm-header">
-                            <table>
-                                <tr>
-                                    <th>Year & Semester :</th>
-                                    <th>Subject :</th>
-                                    <th>Activity :</th>
-                                    <th>Date :</th>
+                        <div class="rsm-header">
+                            <div class="rsmh-left-col">
+                                <p>Show <select name="" id="">
+                                    <option value="1">5</option>
+                                    <option value="2">10</option>
+                                </select> entries</p>
+                            </div>
+                            <div class="rsmh-right-col">
+                                <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                                    <input type="text" placeholder="Search.." name="search2">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="rsm-footer">
+                            <table border="2">
+                                <tr style="background-color:rgb(202, 135, 35)">
+                                    <th>Subject code</th>
+                                    <th>Subject name</th>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                            <option value="1">Year 1 Semester 1</option>
-                                            <option value="2">Year 1 Semester 2</option>
-                                            <option value="3">Year 2 Semester 1</option>
-                                            <option value="4">Year 2 Semester 2</option>
-                                            <option value="5">Year 3 Semester 1</option>
-                                            <option value="6">Year 3 Semester 2</option>
-                                            <option value="7">Year 4 Semester 1</option>
-                                            <option value="8">Year 4 Semester 2</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                            <option value="1">IS21010</option>
-                                            <option value="2">IS21011</option>
-                                            <option value="3">IS21012</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                            <option value="1">Lecture</option>
-                                            <option value="2">Practical session</option>
-                                            <option value="3">Online quiz</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                        </select>
-                                    </td>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
+                                </tr>
+                                <tr>
+                                    <td>IS110122</td>
+                                    <td>Intoduction to IS</td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="rsmm-footer">
-                            <div class="rsmmf-col" style="background-color: rgb(16, 150, 16);">
-                                <div class="rsmmfc-top">
-                                    <p>Present Students</p>
-                                </div>
-                                <div class="rsmmfc-middle">
-                                    <p>70<span style="font-size: 50%;">%</span></p>
-                                </div>
-                                <div class="rsmmfc-bottom">
-                                    <p>From 51 Students</p>
-                                </div>
-                            </div>
-                            <div class="rsmmf-col" style="background-color: rgb(214, 201, 18);">
-                                <div class="rsmmfc-top">
-                                    <p>Abesent Students</p>
-                                </div>
-                                <div class="rsmmfc-middle">
-                                    <p>30<span style="font-size: 50%;">%</span></p>
-                                </div>
-                                <div class="rsmmfc-bottom">
-                                    <p>From 51 Students</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="rsm-bottom">
-                        <div class="rsmb-col">
-                            <button type="button">Present List</button>
+                        <div class="rsm-col">
+                            <button type="button" class="rsmb-col-btn" style="background-color: red;"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</button>
                         </div>
-                        <div class="rsmb-col">
-                            <button type="button">Absent List</button>
+                        <div class="rsm-col">
+                            <button type="button" class="rsmb-col-btn" style="background-color: rgb(5, 165, 5);"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Download .xls</button>
                         </div>
                     </div>
                 </div>
