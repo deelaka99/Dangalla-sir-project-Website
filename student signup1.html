@@ -34,7 +34,7 @@
         }
         
         .form {
-            background-color: white;
+            background-color: rgb(224, 224, 224);
             height: 60%;
             width: 40%;
             border-radius: 30px;
@@ -50,17 +50,17 @@
         .row input[type="text"] {
             border-radius: 10mm;
             background-color: white;
-            border: 2px solid purple;
+            border: none;
             padding: 2%;
             width: 95%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: large;
+            color: grey;
         }
         
         .row {
             padding: 0.5%;
-            height: 10%;
+            height: 9%;
+            position: relative;
         }
         
         .col {
@@ -79,15 +79,6 @@
             padding: 3%;
             padding-left: 10%;
             padding-right: 10%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .row p {
-            text-align: center;
-            font-style: italic;
-            color: rgb(51, 51, 51);
         }
         
         label {
@@ -96,44 +87,38 @@
         
         button:hover,
         input[type="submit"]:hover {
-            background-color: rgb(89, 12, 161);
-        }
-        
-        input[type="text"]:hover {
-            opacity: 0.7;
-            border: 2px solid #371a70;
-        }
-        
-        a:hover {
-            opacity: 0.75;
+            background-color: rgb(0, 0, 0);
         }
         
         .input-select {
             border-radius: 10mm;
-            background-color: white;
-            border: 2px solid purple;
+            border: none;
             padding: 2%;
             width: 100%;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            color: rgb(56, 56, 56);
-        }
-        
-        .input-select:hover {
-            opacity: 0.7;
-            border: 2px solid #371a70;
+            color: grey;
+            background-color: white;
+            font-size: large;
         }
         
         .input-select option {
-            color: rgb(56, 56, 56);
+            color: black;
         }
         
-        select option {
-            margin: 40px;
-            background: rgba(88, 2, 114, 0.3);
-            color: black;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        .row p {
+            text-align: center;
+            font-style: italic;
+            color: rgb(51, 51, 51);
+        }
+        
+        .row button {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -146,22 +131,20 @@
                     <div class="row">
                         <h1 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin: 0;">Sign Up</h1>
                     </div>
-                    <div class="row" style="display:flex; padding: 0;">
-                        <div class="col">
-                            <input type="text" placeholder="       First Name">
-                        </div>
-                        <div class="col">
-                            <input type="text" placeholder="       Last Name">
-                        </div>
+                    <div class="row">
+                        <input type="text" placeholder="First Name">
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       Email">
+                        <input type="text" placeholder="Last Name">
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       NIC no">
+                        <input type="text" placeholder="Email">
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       Registration No">
+                        <input type="text" placeholder="NIC no">
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="Registration No">
                     </div>
                     <div class="row">
                         <select class="faculty input-select">

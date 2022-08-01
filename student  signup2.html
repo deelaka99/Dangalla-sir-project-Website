@@ -14,6 +14,11 @@
             padding: 0;
         }
         
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
         .main {
             background-image: url("Src/pexels-pixabay-33545.jpg");
             height: 100%;
@@ -21,6 +26,7 @@
             background-position: center;
             background-repeat: no-repeat;
             margin: 0;
+            position: relative;
         }
         
         .main-trans {
@@ -34,7 +40,7 @@
         }
         
         .form {
-            background-color: white;
+            background-color: rgb(224, 224, 224);
             height: 60%;
             width: 40%;
             border-radius: 30px;
@@ -50,17 +56,16 @@
         .row input[type="text"] {
             border-radius: 10mm;
             background-color: white;
-            border: 2px solid purple;
+            border: none;
             padding: 2%;
             width: 95%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: large;
         }
         
         .row {
             padding: 0.5%;
-            height: 9%;
+            height: 12%;
+            position: relative;
         }
         
         .col {
@@ -68,20 +73,14 @@
             padding: 0.5%;
         }
         
-        button,
-        input[type="submit"] {
+        button {
             border-radius: 10mm;
             border: none;
             background-color: blueviolet;
             color: white;
-            font-weight: 500;
             font-size: large;
-            padding: 3%;
-            padding-left: 10%;
-            padding-right: 10%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 5%;
+            width: 60%;
         }
         
         .row p {
@@ -95,17 +94,9 @@
         }
         
         button:hover,
-        input[type="submit"]:hover {
-            background-color: rgb(89, 12, 161);
-        }
-        
-        input[type="text"]:hover {
-            opacity: 0.7;
-            border: 2px solid #371a70;
-        }
-        
-        a:hover {
-            opacity: 0.75;
+        input[type="submit"]:hover,
+        .pp label:hover {
+            background-color: black
         }
         
         input[type="file"] {
@@ -123,9 +114,23 @@
             padding: 1%;
             padding-left: 5%;
             padding-right: 5%;
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
+        }
+        
+        .center label,
+        .row-container,
+        .row-col button {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .row-col {
+            width: 50%;
+            position: relative;
         }
     </style>
 </head>
@@ -138,44 +143,34 @@
                     <div class="row">
                         <h1 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin: 0;">Sign Up</h1>
                     </div>
-                    <div class="row" style="display:flex; padding: 0;">
-                        <div class="col">
-                            <input type="text" placeholder="       First Name">
-                        </div>
-                        <div class="col">
-                            <input type="text" placeholder="       Last Name">
+                    <div class="row">
+                        <div class="row-container">
+                            <label>Gender</label> <input type="radio" name="gender" value="male" checked="checked"> <label>Male</label>
+                            <input type="radio" name="gender" value="female"><label>Female</label>
                         </div>
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       Email">
+                        <input type="text" placeholder="User Name">
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       NIC no">
-                    </div>
-                    <div class="row" style="padding: 2%;">
-                        <label>Gender</label> <input type="radio" name="gender" value="male" checked="checked"> <label>Male</label>
-                        <input type="radio" name="gender" value="female"><label>Female</label>
+                        <input type="text" placeholder="Password">
                     </div>
                     <div class="row">
-                        <input type="text" placeholder="       User Name">
+                        <input type="text" placeholder="Confirm Password">
                     </div>
-                    <div class="row">
-                        <input type="text" placeholder="       Password">
-                    </div>
-                    <div class="row">
-                        <input type="text" placeholder="       Confirm Password">
-                    </div>
-                    <div class="row">
-                        <label for="">Profile picture </label>
+                    <div class="row center pp">
                         <label class="input-pp">Profile picture <input type="file" name="profile picture"></label>
                     </div>
                     <div class="row" style="display:flex; padding: 0;">
-                        <Button type="button" style="margin-right:1%;"><A href="student signup1.html" style="color: white;text-decoration: none;">Back</A></Button>
-                        <input type="submit" value="Sign Up" style="margin-left:1%;">
-
+                        <div class="row-col">
+                            <Button type="button"><A href="student signup1.html">Back</A></Button>
+                        </div>
+                        <div class="row-col">
+                            <Button type="button"><A href="">Sign up</A></Button>
+                        </div>
                     </div>
                     <div class="row">
-                        <p>Already have an account? <a href="index.htm" style="text-decoration:none">Log in</a></p>
+                        <p>Already have an account? <a href="index.htm" style="text-decoration:none; color: blueviolet;">Log in</a></p>
                     </div>
                 </div>
             </div>
