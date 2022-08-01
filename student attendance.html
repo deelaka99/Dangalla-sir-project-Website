@@ -155,7 +155,7 @@
         }
         
         .btn-center,
-        .rsmb-col button,
+        .rsm-bottom button,
         .rsm-top h1,
         .rsmmfc-top p,
         .rsmmfc-middle p,
@@ -192,20 +192,15 @@
         
         .rsm-bottom {
             height: 10%;
-            display: flex;
-        }
-        
-        .rsmb-col {
-            width: 50%;
             position: relative;
         }
         
-        .rsmb-col button {
+        .rsm-bottom button {
             background-color: darkmagenta;
             border: none;
             border-radius: 5mm;
-            width: 65%;
-            height: 50%;
+            width: 30%;
+            height: 60%;
             color: white;
             font-size: large;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -276,14 +271,19 @@
         table select {
             border: 1px solid darkmagenta;
             background-color: aliceblue;
-            width: 100%;
-            height: 100%;
-            padding-top: 3%;
-            padding-bottom: 3%;
+            width: 40%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-left: 2%;
+            padding-right: 1%;
             border-radius: 2mm;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 100%;
             color: gray;
+        }
+        
+        select option {
+            color: black;
         }
     </style>
 </head>
@@ -296,21 +296,21 @@
                     <div class="top-upper"></div>
                     <div class="middle-upper">
                         <div class="middle-upper-header">
-                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Teacher Portal</h1>
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Student Portal</h1>
                         </div>
                         <div class="middle-upper-links">
                             <div class="link0" style="padding:0"></div>
                             <div class="link1">
-                                <a href="teacher profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                                <a href="student profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
                             </div>
                             <div class="link2">
-                                <a href="teacher pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                                <a href="student pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
                             </div>
                             <div class="link3">
-                                <a href="teacher subjects.html"><i class="fa fa-book" aria-hidden="true"></i>  Subjects</a>
+                                <a href="student qr code.html"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
                             </div>
                             <div class="link4">
-                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
                             </div>
                         </div>
                     </div>
@@ -336,9 +336,6 @@
                             <table>
                                 <tr>
                                     <th>Year & Semester :</th>
-                                    <th>Subject :</th>
-                                    <th>Activity :</th>
-                                    <th>Date :</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -354,62 +351,36 @@
                                             <option value="8">Year 4 Semester 2</option>
                                         </select>
                                     </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                            <option value="1">IS21010</option>
-                                            <option value="2">IS21011</option>
-                                            <option value="3">IS21012</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                            <option value="1">Lecture</option>
-                                            <option value="2">Practical session</option>
-                                            <option value="3">Online quiz</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="" id="">
-                                            <option value="0">Choose...</option>
-                                        </select>
-                                    </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="rsmm-footer">
                             <div class="rsmmf-col" style="background-color: rgb(16, 150, 16);">
                                 <div class="rsmmfc-top">
-                                    <p>Present Students</p>
+                                    <p>Present Days</p>
                                 </div>
                                 <div class="rsmmfc-middle">
                                     <p>70<span style="font-size: 50%;">%</span></p>
                                 </div>
                                 <div class="rsmmfc-bottom">
-                                    <p>From 51 Students</p>
+                                    <p>From 151 days</p>
                                 </div>
                             </div>
                             <div class="rsmmf-col" style="background-color: rgb(211, 137, 1);">
                                 <div class="rsmmfc-top">
-                                    <p>Abesent Students</p>
+                                    <p>Abesent Days</p>
                                 </div>
                                 <div class="rsmmfc-middle">
                                     <p>30<span style="font-size: 50%;">%</span></p>
                                 </div>
                                 <div class="rsmmfc-bottom">
-                                    <p>From 51 Students</p>
+                                    <p>From 151 days</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="rsm-bottom">
-                        <div class="rsmb-col">
-                            <button type="button"><a href="teacher present.html">Present List</a></button>
-                        </div>
-                        <div class="rsmb-col">
-                            <button type="button"><a href="teacher absent.html">Absent List</a></button>
-                        </div>
+                        <button type="button"><a href="student att_see_more.html">See more <i class="fa fa-caret-down" aria-hidden="true"></i></a></button>
                     </div>
                 </div>
                 <div class="rs-bottom"></div>
