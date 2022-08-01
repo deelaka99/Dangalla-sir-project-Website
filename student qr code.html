@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student - QR code</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-transp {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .left-side {
+            height: 100%;
+            width: 35%;
+            background-color: rgb(47, 3, 88);
+            opacity: 0.8;
+        }
+        
+        .right-side {
+            height: 100%;
+            width: 65%;
+            background-color: rgb(214, 213, 213);
+            opacity: 0.87;
+        }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 25%;
+        }
+        
+        .middle-upper {
+            height: 50%;
+        }
+        
+        .bottom-upper {
+            height: 25%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link0,
+        .link1,
+        .link2,
+        .link3,
+        .link4 {
+            height: 15%;
+            padding-left: 10%;
+            padding-top: 5%;
+        }
+        
+        .link1 a,
+        .link2 a,
+        .link3 a,
+        .link4 a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link1:hover,
+        .link2:hover,
+        .link4:hover {
+            background-color: blueviolet;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+            position: relative;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .btn-center,
+        .rsm-bottom button,
+        .qrcode-container,
+        .qrcode {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover {
+            background-color: black;
+        }
+        
+        .rsm-middle {
+            height: 100%;
+            position: relative;
+        }
+        
+        .qrcode-container {
+            background-color: white;
+            height: 70%;
+            width: 70%;
+            border-radius: 10mm;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg-transp">
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Student Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0" style="padding:0"></div>
+                            <div class="link1">
+                                <a href="student profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+                            <div class="link2">
+                                <a href="student pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                            </div>
+                            <div class="link3">
+                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
+                            </div>
+                            <div class="link4">
+                                <a href="student attendance.html"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div style="width: 70%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-top"></div>
+                    <div class="rsm-middle">
+                        <div class="qrcode-container">
+                            <img src="Src/qr dummy.png" alt="QR code" style="height:70%;width:70%" class="qrcode"> </div>
+                    </div>
+                    <div class="rsm-bottom"></div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

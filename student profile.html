@@ -160,7 +160,8 @@
         .cont-middle input[type="text"],
         .cont-middle p,
         .cont-m-col-radio,
-        .input-pp {
+        .input-pp,
+        .cont-m-row select {
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
@@ -325,6 +326,7 @@
         .cont-middle {
             height: 80%;
             position: relative;
+            overflow-y: auto;
         }
         
         .cont-bottom {
@@ -352,7 +354,8 @@
             width: 25%;
         }
         
-        .cont-middle input[type="text"] {
+        .cont-middle input[type="text"],
+        .cont-middle select {
             width: 90%;
             height: 50%;
             border: none;
@@ -361,6 +364,14 @@
             padding-right: 3%;
             background-color: white;
             font-size: large;
+        }
+        
+        .cont-middle select {
+            color: grey;
+        }
+        
+        .cont-middle select option {
+            color: black;
         }
         
         input[type="file"] {
@@ -407,13 +418,13 @@
                                 <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
                             </div>
                             <div class="link2">
-                                <a href="teacher pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                                <a href="student pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
                             </div>
                             <div class="link3">
-                                <a href="teacher subjects.html"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
+                                <a href="student qr code.html"><i class="fa fa-qrcode" aria-hidden="true"></i>  QR Code</a>
                             </div>
                             <div class="link4">
-                                <a href="teacher attendance.html"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                                <a href="student attendance.html"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
                             </div>
                         </div>
                     </div>
@@ -561,6 +572,46 @@
                 </div>
                 <div class="cont-m-row">
                     <input type="text" name="" placeholder="        NIC no">
+                </div>
+                <div class="cont-m-row" style="display: flex;position: relative;">
+                    <input type="text" name="" placeholder="        Registration No">
+                </div>
+                <div class="cont-m-row">
+                    <select class="faculty input-select">
+                        <option value="" disabled selected hidden>Faculty</option>
+                        <option value="1">Faculty of Management studies</option>
+                        <option value="2">Faculty of Social Sciences & Languages</option>
+                        <option value="3">Faculty of Applied Sciences</option>
+                        <option value="4">Faculty of Agricultural Sciences</option>
+                        <option value="5">Faculty of Geomatics</option>
+                        <option value="6">Faculty of Technology</option>
+                        <option value="7">Faculty of Medicine</option>
+                    </select>
+                </div>
+                <div class="cont-m-row">
+                    <select class="faculty input-select">
+                        <option value="" disabled selected hidden>Department</option>
+                        <option value="1">Department of NR</option>
+                        <option value="2">Department of PST</option>
+                        <option value="3">Department of FST</option>
+                        <option value="4">Department of CIS</option>
+                        <option value="5">Department of SSPE</option>
+                    </select>
+                </div>
+                <div class="cont-m-row">
+                    <select class="faculty input-select">
+                        <option value="" disabled selected hidden>Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        Mobile no">
+                </div>
+                <div class="cont-m-row">
+                    <input type="text" name="" placeholder="        Address">
                 </div>
                 <div class="cont-m-row" style="display: flex;position: relative;">
                     <div class="cont-m-col"></div>

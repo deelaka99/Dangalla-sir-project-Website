@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student - Attendance</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-transp {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .left-side {
+            height: 100%;
+            width: 35%;
+            background-color: rgb(47, 3, 88);
+            opacity: 0.8;
+        }
+        
+        .right-side {
+            height: 100%;
+            width: 65%;
+            background-color: rgb(214, 213, 213);
+            opacity: 0.87;
+        }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 25%;
+        }
+        
+        .middle-upper {
+            height: 50%;
+        }
+        
+        .bottom-upper {
+            height: 25%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link0,
+        .link1,
+        .link2,
+        .link3,
+        .link4 {
+            height: 15%;
+            padding-left: 10%;
+            padding-top: 5%;
+        }
+        
+        .link1 a,
+        .link2 a,
+        .link3 a,
+        .link4 a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link1:hover,
+        .link2:hover,
+        .link3:hover {
+            background-color: blueviolet;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+            position: relative;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .btn-center,
+        .rsmb-col button,
+        .rsm-top h1,
+        .rsmmfc-top p,
+        .rsmmfc-middle p,
+        .rsmmfc-bottom p,
+        table {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover,
+        .rsmb-col button:hover {
+            background-color: black;
+        }
+        
+        .rsmm-footer div:hover {
+            opacity: 0.9;
+        }
+        
+        .rsm-top {
+            height: 20%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: relative;
+            font-size: small;
+        }
+        
+        .rsm-middle {
+            height: 70%;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rsmb-col {
+            width: 50%;
+            position: relative;
+        }
+        
+        .rsmb-col button {
+            background-color: darkmagenta;
+            border: none;
+            border-radius: 5mm;
+            width: 65%;
+            height: 50%;
+            color: white;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .rsmm-header {
+            height: 30%;
+            position: relative;
+        }
+        
+        .rsmm-footer {
+            height: 70%;
+            display: flex;
+        }
+        
+        .rsmmf-col {
+            width: 50%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+        }
+        
+        .rsmmfc-top {
+            height: 20%;
+            position: relative;
+            font-size: 97%;
+            text-align: center;
+        }
+        
+        .rsmmfc-middle {
+            height: 60%;
+            position: relative;
+            font-size: 500%;
+            font-weight: bold;
+        }
+        
+        .rsmmfc-bottom {
+            height: 20%;
+            position: relative;
+            font-size: smaller;
+            font-style: italic;
+        }
+        
+        .rsmmfc-top p,
+        .rsmmfc-middle p,
+        .rsmmfc-bottom p {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        
+        table td {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        
+        table th {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        
+        table select {
+            border: 1px solid darkmagenta;
+            background-color: aliceblue;
+            width: 100%;
+            height: 100%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            border-radius: 2mm;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100%;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg-transp">
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Teacher Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0" style="padding:0"></div>
+                            <div class="link1">
+                                <a href="teacher profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+                            <div class="link2">
+                                <a href="teacher pw change.html"><i class="fa fa-lock" aria-hidden="true"></i>  Change Password</a>
+                            </div>
+                            <div class="link3">
+                                <a href="teacher subjects.html"><i class="fa fa-book" aria-hidden="true"></i>  Subjects</a>
+                            </div>
+                            <div class="link4">
+                                <a href="" class="disabled" style="color:rgb(219, 7, 219);"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Attendance Record</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div style="width: 70%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-top">
+                        <h1>Attendance Summary</h1>
+                    </div>
+                    <div class="rsm-middle">
+                        <div class="rsmm-header">
+                            <table>
+                                <tr>
+                                    <th>Year & Semester :</th>
+                                    <th>Subject :</th>
+                                    <th>Activity :</th>
+                                    <th>Date :</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                            <option value="1">Year 1 Semester 1</option>
+                                            <option value="2">Year 1 Semester 2</option>
+                                            <option value="3">Year 2 Semester 1</option>
+                                            <option value="4">Year 2 Semester 2</option>
+                                            <option value="5">Year 3 Semester 1</option>
+                                            <option value="6">Year 3 Semester 2</option>
+                                            <option value="7">Year 4 Semester 1</option>
+                                            <option value="8">Year 4 Semester 2</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                            <option value="1">IS21010</option>
+                                            <option value="2">IS21011</option>
+                                            <option value="3">IS21012</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                            <option value="1">Lecture</option>
+                                            <option value="2">Practical session</option>
+                                            <option value="3">Online quiz</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="0">Choose...</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="rsmm-footer">
+                            <div class="rsmmf-col" style="background-color: rgb(16, 150, 16);">
+                                <div class="rsmmfc-top">
+                                    <p>Present Students</p>
+                                </div>
+                                <div class="rsmmfc-middle">
+                                    <p>70<span style="font-size: 50%;">%</span></p>
+                                </div>
+                                <div class="rsmmfc-bottom">
+                                    <p>From 51 Students</p>
+                                </div>
+                            </div>
+                            <div class="rsmmf-col" style="background-color: rgb(211, 137, 1);">
+                                <div class="rsmmfc-top">
+                                    <p>Abesent Students</p>
+                                </div>
+                                <div class="rsmmfc-middle">
+                                    <p>30<span style="font-size: 50%;">%</span></p>
+                                </div>
+                                <div class="rsmmfc-bottom">
+                                    <p>From 51 Students</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rsm-bottom">
+                        <div class="rsmb-col">
+                            <button type="button"><a href="teacher present.html">Present List</a></button>
+                        </div>
+                        <div class="rsmb-col">
+                            <button type="button"><a href="teacher absent.html">Absent List</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
