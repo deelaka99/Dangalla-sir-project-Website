@@ -299,56 +299,101 @@
             border-radius: 2mm;
         }
         
-        tr:nth-child(even) {
+        .rsmf-table tr:nth-child(even) {
             background-color: rgb(233, 235, 168);
         }
         
-        table {
+        .rsmf-table {
             width: 90%;
-            height: 50%;
+            height: 100%;
             border-collapse: collapse;
             margin: 0;
             position: absolute;
             /*According to himself ,behaviours are done*/
-            top: 30%;
+            top: 50%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+            overflow-y: auto;
         }
         
-        th {
+        .rsmf-table table {
+            width: 100%;
+            height: 70%;
+        }
+        
+        .rsmf-table th {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: large;
+            height: 30px;
         }
         
-        td {
+        .rsmf-table td {
             padding: 1%;
             color: rgb(63, 63, 63);
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            height: 20px;
         }
         
-        tr:hover {
+        .rsmf-table tr:hover {
             background-color: blueviolet;
         }
         
-        td:hover {
+        .rsmf-table td:hover {
             color: white;
         }
         
-        .tr-heading {
-            background-color: grey;
-        }
-        
-        td,
-        tr,
-        th,
-        table {
+        .rsmf-table td,
+        .rsmf-table tr,
+        .rsmf-table th,
+        .rsmf-table {
             border: none;
         }
         
-        select option {
+        .rsmt-footer {
+            height: 50%;
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .rsmt-footer table {
+            width: 50%;
+        }
+        
+        .rsmt-footer th {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        
+        .rsmt-footer select {
+            border: 1px solid darkmagenta;
+            background-color: aliceblue;
+            width: 30%;
+            height: 40%;
+            border-radius: 2mm;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: gray;
+        }
+        
+        .rsmt-footer select option {
             color: black;
+        }
+        
+        .rsmt-header {
+            height: 50%;
+            position: relative;
+        }
+        
+        .rsmt-header h1 {
+            font-size: x-large;
+        }
+        
+        .rsmf-table-sticky_th {
+            background-color: rgb(202, 135, 35);
+            position: sticky;
+            top: 0;
         }
     </style>
 </head>
@@ -399,7 +444,6 @@
                         </div>
                         <div class="rsmt-footer">
                             <select class="rsmtf-select">
-                                <option value="" disabled selected hidden>All</option>
                                 <option value="1">Year I Semsester I</option>
                                 <option value="2">Year I Semsester II</option>
                                 <option value="3">Year II Semsester I</option>
@@ -423,44 +467,70 @@
                             </div>
                         </div>
                         <div class="rsm-footer">
-                            <table border="2">
-                                <tr style="background-color:rgb(202, 135, 35)">
-                                    <th>Subject code</th>
-                                    <th>Subject name</th>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                                <tr>
-                                    <td>IS110122</td>
-                                    <td>Intoduction to IS</td>
-                                </tr>
-                            </table>
+                            <div class="rsmf-table">
+                                <table>
+                                    <tr class="rsmf-table-sticky_th">
+                                        <th>Subject code</th>
+                                        <th>Subject name</th>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IS110122</td>
+                                        <td>Intoduction to IS</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="rsm-bottom">

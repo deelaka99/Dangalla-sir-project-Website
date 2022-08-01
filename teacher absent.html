@@ -303,7 +303,7 @@
         
         .rsmf-table {
             width: 90%;
-            height: 50%;
+            height: 90%;
             border-collapse: collapse;
             margin: 0;
             position: absolute;
@@ -312,11 +312,17 @@
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+            overflow-y: auto;
+        }
+        
+        .rsmf-table table {
+            width: 100%;
         }
         
         .rsmf-table th {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: large;
+            height: 30px;
         }
         
         .rsmf-table td {
@@ -324,6 +330,7 @@
             color: rgb(63, 63, 63);
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            height: 20px;
         }
         
         .rsmf-table tr:hover {
@@ -367,6 +374,12 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 100%;
             color: gray;
+        }
+        
+        .rsmf-table-sticky_th {
+            background-color: rgb(202, 135, 35);
+            position: sticky;
+            top: 0;
         }
     </style>
 </head>
@@ -481,52 +494,70 @@
                             </div>
                         </div>
                         <div class="rsm-footer">
-                            <table class="rsmf-table">
-                                <tr style="background-color:rgb(202, 135, 35)">
-                                    <th>Name</th>
-                                    <th>Reg. No</th>
-                                </tr>
-                                <tr>
-                                    <td>P.D.W. Kariyawasam</td>
-                                    <td>18APC3544</td>
-                                </tr>
-                                <tr>
-                                    <td>P.W.C.J. Senarthne</td>
-                                    <td>18APC3546</td>
-                                </tr>
-                                <tr>
-                                    <td>V.T. Ranathunga</td>
-                                    <td>18APC3345</td>
-                                </tr>
-                                <tr>
-                                    <td>Rosi Senanayake</td>
-                                    <td>18APC5645</td>
-                                </tr>
-                                <tr>
-                                    <td>P.D.W. Kariyawasam</td>
-                                    <td>18APC3544</td>
-                                </tr>
-                                <tr>
-                                    <td>P.W.C.J. Senarthne</td>
-                                    <td>18APC3546</td>
-                                </tr>
-                                <tr>
-                                    <td>V.T. Ranathunga</td>
-                                    <td>18APC3345</td>
-                                </tr>
-                                <tr>
-                                    <td>Rosi Senanayake</td>
-                                    <td>18APC5645</td>
-                                </tr>
-                                <tr>
-                                    <td>V.T. Ranathunga</td>
-                                    <td>18APC3345</td>
-                                </tr>
-                                <tr>
-                                    <td>Rosi Senanayake</td>
-                                    <td>18APC5645</td>
-                                </tr>
-                            </table>
+                            <div class="rsmf-table">
+                                <table>
+                                    <tr class="rsmf-table-sticky_th">
+                                        <th>Name</th>
+                                        <th>Reg. No</th>
+                                    </tr>
+                                    <tr>
+                                        <td>P.D.W. Kariyawasam</td>
+                                        <td>18APC3544</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.W.C.J. Senarthne</td>
+                                        <td>18APC3546</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.D.W. Kariyawasam</td>
+                                        <td>18APC3544</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.W.C.J. Senarthne</td>
+                                        <td>18APC3546</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="rsm-bottom">
