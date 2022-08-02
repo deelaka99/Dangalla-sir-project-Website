@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard See More</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-transp {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .left-side {
+            height: 100%;
+            width: 35%;
+            background-color: rgb(47, 3, 88);
+            opacity: 0.8;
+        }
+        
+        .right-side {
+            height: 100%;
+            width: 65%;
+            background-color: rgb(214, 213, 213);
+            opacity: 0.87;
+        }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 10%;
+        }
+        
+        .middle-upper {
+            height: 80%;
+        }
+        
+        .bottom-upper {
+            height: 10%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link1,
+        .link4 {
+            height: 10%;
+            padding-top: 5%;
+        }
+        
+        .link2 {
+            height: 42.5%;
+        }
+        
+        .link3 {
+            height: 32.5%;
+        }
+        
+        .link0 {
+            height: 5%;
+        }
+        
+        .link1 a,
+        .link2 label,
+        .link3 label,
+        .link4 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            padding-left: 10%;
+        }
+        
+        .link-container,
+        .link-header {
+            padding-top: 3%;
+            width: 100%;
+        }
+        
+        .link-container a {
+            text-decoration: none;
+            color: rgb(146, 146, 146);
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            font-style: oblique;
+            padding-left: 10%;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link2:hover,
+        .link3:hover,
+        .link4:hover {
+            background-color: blueviolet;
+        }
+        
+        .link2 a:hover,
+        .link3 a:hover {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+            position: relative;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .logout-btn,
+        .back-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .back-btn button {
+            width: 50%;
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: darkmagenta;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .btn-center,
+        .rsmb-col-btn,
+        .rsmt-header h1,
+        .rsmh-row table {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover,
+        .back-btn button:hover {
+            background-color: black;
+        }
+        
+        .rsm-col button:hover {
+            opacity: 0.7;
+        }
+        
+        .rsm-top {
+            height: 20%;
+        }
+        
+        .rsm-top h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .rsm-middle {
+            background-color: white;
+            height: 70%;
+            border-radius: 10mm;
+            box-shadow: 0px 0px 7px 3px rgb(46, 46, 46);
+            padding: 3%;
+        }
+        
+        .rsm-bottom {
+            height: 10%;
+            margin-left: 5%;
+            display: flex;
+        }
+        
+        .rsm-col {
+            width: 50%;
+            position: relative;
+        }
+        
+        .rsmb-col-btn {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5mm;
+            width: 70%;
+            height: 60%;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        
+        .rsmt-footer {
+            height: 60%;
+            position: relative;
+        }
+        
+        .rsm-header {
+            height: 30%;
+        }
+        
+        .rsmh-row {
+            height: 50%;
+            position: relative;
+        }
+        
+        .rsm-footer {
+            height: 70%;
+            position: relative;
+        }
+        
+        .rsmh-left-col {
+            width: 40%;
+            height: 100%;
+            padding-top: 5%;
+        }
+        
+        .rsmh-right-col {
+            width: 60%;
+            height: 100%;
+            padding-top: 5%;
+            padding-left: 10%;
+        }
+        
+        .rsmh-right-col input[type="text"] {
+            float: left;
+            border: 1px solid darkmagenta;
+            border-top-left-radius: 2mm;
+            border-bottom-left-radius: 2mm;
+            width: 70%;
+            height: 60%;
+            padding: 2%;
+            background-color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .rsmh-right-col button {
+            float: left;
+            border: 1px solid darkmagenta;
+            background-color: darkmagenta;
+            height: 60%;
+            padding: 2%;
+            border-top-right-radius: 2mm;
+            border-bottom-right-radius: 2mm;
+            color: rgb(94, 94, 94);
+        }
+        
+        .rsmh-right-col button:hover {
+            background-color: black;
+            border: 1px solid rgb(0, 0, 0);
+            color: white;
+        }
+        
+        .rsmh-left-col p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .rsmh-left-col select {
+            border: 1px solid darkmagenta;
+            border-radius: 2mm;
+        }
+        
+        .rsmf-table tr:nth-child(even) {
+            background-color: rgb(233, 235, 168);
+        }
+        
+        .rsmf-table {
+            width: 90%;
+            height: 90%;
+            border-collapse: collapse;
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            overflow-y: auto;
+        }
+        
+        .rsmf-table table {
+            width: 100%;
+        }
+        
+        .rsmf-table th {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            height: 30px;
+        }
+        
+        .rsmf-table td {
+            padding: 1%;
+            color: rgb(63, 63, 63);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 20px;
+        }
+        
+        .rsmf-table tr:hover {
+            background-color: blueviolet;
+        }
+        
+        .rsmf-table td:hover {
+            color: white;
+        }
+        
+        .rsmf-table td,
+        .rsmf-table tr,
+        .rsmf-table th,
+        .rsmf-table {
+            border: none;
+        }
+        
+        .rsmh-table {
+            width: 40%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .rsmh-table td {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        
+        .rsmh-table th {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        
+        .rsmh-table select {
+            border: 1px solid darkmagenta;
+            background-color: aliceblue;
+            width: 100%;
+            height: 100%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            border-radius: 2mm;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100%;
+            color: gray;
+        }
+        
+        .rsmh-table option {
+            color: black;
+        }
+        
+        .rsmf-table-sticky_th {
+            background-color: rgb(202, 135, 35);
+            position: sticky;
+            top: 0;
+        }
+        
+        .rsmf-table-sticky_th:hover {
+            background-color: none;
+        }
+        
+        .link-content {
+            background-color: blueviolet;
+            height: 80%;
+            width: 100%;
+            position: relative;
+        }
+        
+        .link-header {
+            height: 20%;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg-transp">
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Admin Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0" style="padding:0"></div>
+                            <div class="link1">
+                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-puzzle-piece" aria-hidden="true"></i>  Dashboard</a>
+                            </div>
+                            <div class="link2">
+
+                                <div class="link-header">
+                                    <label><i class="fa fa-users" aria-hidden="true"></i> Manage Accounts <i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage student.html"> -  Students</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage teacher.html"> -  Teachers</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage staff.html"> -  Staff</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage admin.html"> -  System Admin</a>
+                                </div>
+
+                            </div>
+                            <div class="link3">
+
+                                <div class="link-header">
+                                    <label><i class="fa fa-cog" aria-hidden="true"></i> Settings <i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin add year semester.html"> -  Add Years/ Semesters</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin add subjects.html"> -  Add Subjects</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin assigning.html"> -  Assigning</a>
+                                </div>
+
+                            </div>
+                            <div class="link4">
+                                <a href="admin profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div class="back-btn">
+                        <button type="button" class="btn-center"><a href="admin dashboard.html">Back</a></button>
+                    </div>
+                    <div style="width: 40%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-top">
+                        <h1>Registration Summary</h1>
+                    </div>
+                    <div class="rsm-middle">
+                        <div class="rsm-header">
+                            <div class="rsmh-row">
+                                <table class="rsmh-table">
+                                    <tr>
+                                        <th>Role :</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="1">Student</option>
+                                                <option value="2">Teacher</option>
+                                                <option value="3">Staff</option>
+                                                <option value="4">Admin</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rsmh-row" style="display: flex;">
+                                <div class="rsmh-left-col">
+                                    <p>Show <select name="" id="">
+                                        <option value="1">5</option>
+                                        <option value="2">10</option>
+                                    </select> entries</p>
+                                </div>
+                                <div class="rsmh-right-col">
+                                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                                        <input type="text" placeholder="Search.." name="search2">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rsm-footer">
+                            <div class="rsmf-table">
+                                <table>
+                                    <tr class="rsmf-table-sticky_th">
+                                        <th>Name</th>
+                                        <th>Reg. No</th>
+                                    </tr>
+                                    <tr>
+                                        <td>P.D.W. Kariyawasam</td>
+                                        <td>18APC3544</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.W.C.J. Senarthne</td>
+                                        <td>18APC3546</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.D.W. Kariyawasam</td>
+                                        <td>18APC3544</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P.W.C.J. Senarthne</td>
+                                        <td>18APC3546</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V.T. Ranathunga</td>
+                                        <td>18APC3345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosi Senanayake</td>
+                                        <td>18APC5645</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rsm-bottom">
+                        <div class="rsm-col">
+                            <button type="button" class="rsmb-col-btn" style="background-color: red;"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</button>
+                        </div>
+                        <div class="rsm-col">
+                            <button type="button" class="rsmb-col-btn" style="background-color: rgb(5, 165, 5);"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Download .xls</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
