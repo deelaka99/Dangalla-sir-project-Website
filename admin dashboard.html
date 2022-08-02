@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-image: url("Src/pexels-pixabay-33545.jpg");
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-transp {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .left-side {
+            height: 100%;
+            width: 35%;
+            background-color: rgb(47, 3, 88);
+            opacity: 0.8;
+        }
+        
+        .right-side {
+            height: 100%;
+            width: 65%;
+            background-color: rgb(214, 213, 213);
+            opacity: 0.87;
+        }
+        
+        .upper {
+            height: 95%;
+        }
+        
+        .lower {
+            height: 5%;
+        }
+        
+        .top-upper {
+            height: 10%;
+        }
+        
+        .middle-upper {
+            height: 80%;
+        }
+        
+        .bottom-upper {
+            height: 10%;
+        }
+        
+        .middle-upper-header {
+            height: 10%;
+        }
+        
+        .middle-upper-links {
+            height: 90%;
+        }
+        
+        .link1,
+        .link4 {
+            height: 10%;
+            padding-top: 5%;
+        }
+        
+        .link2 {
+            height: 42.5%;
+        }
+        
+        .link3 {
+            height: 32.5%;
+        }
+        
+        .link0 {
+            height: 5%;
+        }
+        
+        .link1 a,
+        .link2 label,
+        .link3 label,
+        .link4 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            padding-left: 10%;
+        }
+        
+        .link-container,
+        .link-header {
+            padding-top: 3%;
+            width: 100%;
+        }
+        
+        .link-container a {
+            text-decoration: none;
+            color: rgb(146, 146, 146);
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: x-large;
+            font-style: oblique;
+            padding-left: 10%;
+        }
+        
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .link2:hover,
+        .link3:hover,
+        .link4:hover {
+            background-color: blueviolet;
+        }
+        
+        .link2 a:hover,
+        .link3 a:hover {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .rs-top {
+            height: 10%;
+            display: flex;
+        }
+        
+        .rs-middle {
+            height: 80%;
+            position: relative;
+        }
+        
+        .rs-bottom {
+            height: 10%;
+        }
+        
+        .logout-btn {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            /*According to the .logout btn division , all elements in the division should be arranged*/
+        }
+        
+        .logout-btn button {
+            padding: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: red;
+            border: none;
+            border-radius: 2mm;
+            color: white;
+            font-size: large;
+        }
+        
+        .btn-center,
+        .rsm-header h1,
+        .rsm-bottom button,
+        #my-pie-chart,
+        #my-pie-chart-container,
+        .rsmfu-container,
+        .col-cell,
+        .rsmfu-row-col2 p {
+            margin: 0;
+            position: absolute;
+            /*According to himself ,behaviours are done*/
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .logout-btn button:hover,
+        .rsm-bottom button:hover {
+            background-color: black;
+        }
+        
+        .link-content {
+            background-color: blueviolet;
+            height: 80%;
+            width: 100%;
+            position: relative;
+        }
+        
+        .link-header {
+            height: 20%;
+            width: 100%;
+            position: relative;
+        }
+        
+        .rs-middle {
+            background-color: white;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-radius: 5%;
+        }
+        
+        .rsm-header {
+            height: 15%;
+            position: relative;
+        }
+        
+        .rsm-middle {
+            height: 70%;
+            display: flex;
+        }
+        
+        .rsm-bottom {
+            height: 15%;
+            position: relative;
+        }
+        
+        .rsmf-left {
+            width: 60%;
+            position: relative;
+        }
+        
+        .rsmf-right {
+            width: 40%;
+        }
+        
+        .rsmf-right-upper {
+            height: 100%;
+            position: relative;
+        }
+        
+        .rsm-bottom button {
+            padding: 3%;
+            padding-left: 6%;
+            padding-right: 6%;
+            background-color: rgb(63, 3, 63);
+            border: none;
+            border-radius: 5mm;
+            color: white;
+            font-size: large;
+        }
+        
+        #my-pie-chart-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        #my-pie-chart {
+            background: conic-gradient(rgb(0, 102, 255) 0%, rgb(0, 102, 255) 60%, rgb(98, 157, 247) 60%, rgb(98, 157, 247) 80%, green 80%, green 95%, rgb(47, 245, 129) 95%);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+        
+        #my-pie-chart:hover {
+            width: 320px;
+            height: 320px;
+            opacity: 0.8;
+        }
+        
+        .rsmfu-container {
+            height: 50%;
+            width: 100%;
+        }
+        
+        .rsmfu-row {
+            height: 25%;
+            display: flex;
+        }
+        
+        .rsmfu-row-col1 {
+            width: 25%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .rsmfu-row-col1:hover {
+            opacity: 0.8;
+            width: 30%;
+        }
+        
+        .rsmfu-row-col2 {
+            width: 75%;
+            position: relative;
+        }
+        
+        .col-cell {
+            height: 50%;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg-transp">
+            <div class="left-side">
+                <div class="upper">
+                    <div class="top-upper"></div>
+                    <div class="middle-upper">
+                        <div class="middle-upper-header">
+                            <h1 style="color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Admin Portal</h1>
+                        </div>
+                        <div class="middle-upper-links">
+                            <div class="link0" style="padding:0"></div>
+                            <div class="link1">
+                                <a href="" style="color:rgb(219, 7, 219);" class="disabled"><i class="fa fa-puzzle-piece" aria-hidden="true"></i>  Dashboard</a>
+                            </div>
+                            <div class="link2">
+
+                                <div class="link-header">
+                                    <label><i class="fa fa-users" aria-hidden="true"></i> Manage Accounts <i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage student.html"> -  Students</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage teacher.html"> -  Teachers</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage staff.html"> -  Staff</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin manage admin.html"> -  System Admin</a>
+                                </div>
+
+                            </div>
+                            <div class="link3">
+
+                                <div class="link-header">
+                                    <label><i class="fa fa-cog" aria-hidden="true"></i> Settings <i class="fa fa-caret-down" aria-hidden="true"></i></label>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin add year semester.html"> -  Add Years/ Semesters</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin add subjects.html"> -  Add Subjects</a>
+                                </div>
+                                <div class="link-container">
+                                    <a href="admin assigning.html"> -  Assigning</a>
+                                </div>
+
+                            </div>
+                            <div class="link4">
+                                <a href="admin profile.html"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bottom-upper"></div>
+                </div>
+                <div class="lower">
+                    <p style="font-size:smaller;color: white;text-align: center;padding-top: 3%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-style: italic;font-weight: bold;">&copy; All right reserved.Automated Attendance System</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rs-top">
+                    <div style="width: 70%;height: 100%;"></div>
+                    <div class="logout-btn">
+                        <button type="button" class="btn-center"><a href="index.htm"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log out</a></button>
+                    </div>
+                </div>
+                <div class="rs-middle">
+                    <div class="rsm-header">
+                        <h1>Registration Summary</h1>
+                    </div>
+                    <div class="rsm-middle">
+                        <div class="rsmf-left">
+                            <div id="my-pie-chart-container">
+                                <div id="my-pie-chart"></div>
+                            </div>
+                        </div>
+                        <div class="rsmf-right">
+                            <div class="rsmf-right-upper">
+                                <div class="rsmfu-container">
+                                    <div class="rsmfu-row">
+                                        <div class="rsmfu-row-col1">
+                                            <div class="col-cell" style="background-color: rgb(0, 102, 255);"></div>
+                                        </div>
+                                        <div class="rsmfu-row-col2">
+                                            <p>Students - <span>325</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="rsmfu-row">
+                                        <div class="rsmfu-row-col1">
+                                            <div class="col-cell" style="background-color: rgb(98, 157, 247);"></div>
+                                        </div>
+                                        <div class="rsmfu-row-col2">
+                                            <p>Teachers - <span>100</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="rsmfu-row">
+                                        <div class="rsmfu-row-col1">
+                                            <div class="col-cell" style="background-color: green;"></div>
+                                        </div>
+                                        <div class="rsmfu-row-col2">
+                                            <p>Staff - <span>10</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="rsmfu-row">
+                                        <div class="rsmfu-row-col1">
+                                            <div class="col-cell" style="background-color: rgb(47, 245, 129);"></div>
+                                        </div>
+                                        <div class="rsmfu-row-col2">
+                                            <p>System Admin - <span>5</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rsm-bottom">
+                        <button><a href="">More Info...</a></button>
+                    </div>
+                </div>
+                <div class="rs-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
